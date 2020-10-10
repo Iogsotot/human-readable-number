@@ -2,7 +2,7 @@ module.exports = function toReadable(number) {
     let a = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
     let b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
-    if ((number = number.toString()).length > 9) return 'overflow';
+    if ((number = number.toString()).length > 3) return 'overflow';
     n = ('000' + number).substr(-3).match(/^(\d{1})(\d{2})$/);
     if (!n) return;
     let str = '';
